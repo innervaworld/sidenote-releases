@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SideNote 개인정보처리방침</title>
+<meta name="description" content="SideNote 개인정보처리방침. 적어 둔 내용은 사용자 본인의 기기와 구글 드라이브에만 저장됩니다.">
+<style>
+  :root { --bg:#fff; --text:#191f28; --sub:#8b95a1; --line:#e5e8eb; --card:#f9fafb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#16181d; --text:#e8eaed; --sub:#8b95a1; --line:#2e3138; --card:#1f2229; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.75 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 64px 24px 96px; }
+  h1 { font-size: 26px; letter-spacing: -.02em; margin: 0 0 6px; }
+  .updated { color: var(--sub); font-size: 14px; margin: 0 0 36px; }
+  h2 { font-size: 18px; margin: 40px 0 10px; letter-spacing: -.01em; }
+  ul { padding-left: 20px; } li { margin: 6px 0; }
+  code { background: var(--card); padding: 2px 6px; border-radius: 5px; font-size: 13px; }
+  .key {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 24px 0;
+  }
+  .key p { margin: 0; }
+  a { color: inherit; }
+  footer {
+    margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line);
+    color: var(--sub); font-size: 13px; text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>개인정보처리방침</h1>
+<p class="updated">SideNote · 2026년 8월 26일</p>
+
+<div class="key">
+  <p><b>SideNote 에는 개발자의 서버가 없습니다.</b> 적어 두신 내용은 사용자의 맥과,
+  사용자가 직접 연결한 사용자 본인의 구글 드라이브에만 저장됩니다.
+  개발자는 그 내용을 수집하거나, 열람하거나, 제3자에게 제공하지 않습니다.</p>
+</div>
+
+<h2>어떤 정보를 다루나</h2>
+<ul>
+  <li><b>사용자가 적은 체크리스트와 메모</b> — 항목의 글, 완료 여부, 날짜, 순서</li>
+  <li><b>구글 계정 정보</b> — 구글 계정으로 로그인한 경우에 한해, 어느 계정으로
+      로그인했는지 보여 주기 위한 이메일 주소</li>
+</ul>
+<p>그 밖에 이름, 연락처, 위치, 기기 식별자, 사용 기록 등은 수집하지 않습니다.
+   광고와 분석 도구를 쓰지 않으며, 추적하지 않습니다.</p>
+
+<h2>어디에 저장되나</h2>
+<ul>
+  <li><b>사용자의 맥</b> — <code>~/Library/Application Support/SideNote/</code></li>
+  <li><b>사용자 본인의 구글 드라이브</b> — 구글 계정으로 로그인한 경우에만,
+      <code>sidenote-notes.json</code> 파일 하나로 저장됩니다.
+      이 파일의 소유자는 사용자 본인이며, 사용자의 드라이브 용량을 사용합니다.</li>
+</ul>
+<p>개발자의 서버로 전송되는 정보는 없습니다. 앱이 통신하는 곳은 구글(로그인과 드라이브)과,
+   새 버전이 있는지 확인하기 위한 GitHub 뿐입니다. 새 버전 확인은 공개된 릴리스 정보를
+   읽어 오는 것으로, 사용자의 정보를 보내지 않습니다.</p>
+
+<h2>구글 드라이브 권한</h2>
+<p>SideNote 는 구글에 <code>drive.file</code> 권한 하나만 요청합니다.
+   이 권한은 <b>이 앱이 만든 파일만</b> 다룰 수 있게 합니다.
+   사용자의 드라이브에 있는 다른 문서, 사진, 파일은 앱에 보이지 않으며 접근할 수도 없습니다.</p>
+<p>SideNote 가 구글에서 받은 정보는 위에 적은 용도로만 씁니다. 다른 목적으로 쓰거나,
+   제3자에게 넘기거나, 광고에 활용하지 않습니다.
+   이는 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>의
+   제한적 사용 요건을 따릅니다.</p>
+
+<h2>로그인 정보 보관</h2>
+<p>구글 로그인 후 받은 토큰은 사용자 맥의 <b>키체인</b>에 보관되며, 그 맥을 벗어나지 않습니다.
+   개발자에게 전송되지 않습니다.</p>
+
+<h2>지우고 싶을 때</h2>
+<ul>
+  <li><b>연결만 끊기</b> — 메뉴바 아이콘 우클릭 → "구글 계정 연결 해제".
+      저장된 내용은 그대로 남고 주고받기만 멈춥니다.</li>
+  <li><b>드라이브에서 지우기</b> — 구글 드라이브에서 <code>sidenote-notes.json</code> 을 삭제하세요.</li>
+  <li><b>권한 회수</b> — <a href="https://myaccount.google.com/permissions">구글 계정 권한 관리</a>에서
+      SideNote 의 접근 권한을 언제든 해제할 수 있습니다.</li>
+  <li><b>맥에서 지우기</b> — <code>~/Library/Application Support/SideNote/</code> 폴더를 삭제하세요.</li>
+</ul>
+
+<h2>어린이</h2>
+<p>이 앱은 어린이를 대상으로 하지 않으며, 어린이의 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+<h2>변경</h2>
+<p>이 방침이 바뀌면 이 페이지에 갱신 날짜와 함께 반영합니다.</p>
+
+<h2>문의</h2>
+<p>innervaworld@gmail.com</p>
+
+<footer>
+  <a href="./">SideNote 홈</a> ·
+  <a href="https://github.com/innervaworld/sidenote-releases/releases">모든 버전 보기</a>
+</footer>
+
+</div>
+</body>
+</html>

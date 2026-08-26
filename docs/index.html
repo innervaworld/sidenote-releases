@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SideNote</title>
+<meta name="description" content="화면 오른쪽 끝에서 슬라이드로 나오는 체크리스트. 맥용 무료 앱.">
+<style>
+  :root {
+    --bg: #ffffff; --text: #191f28; --sub: #8b95a1; --line: #e5e8eb; --card: #f9fafb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16181d; --text: #e8eaed; --sub: #8b95a1; --line: #2e3138; --card: #1f2229; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 72px 24px 96px; }
+  header { text-align: center; }
+  header img.icon { width: 88px; height: 88px; }
+  h1 { font-size: 30px; margin: 18px 0 8px; letter-spacing: -.02em; }
+  .tag { color: var(--sub); margin: 0 0 32px; }
+  .dl img { width: 180px; }
+  .dl .light { display: inline; } .dl .dark { display: none; }
+  @media (prefers-color-scheme: dark) {
+    .dl .light { display: none; } .dl .dark { display: inline; }
+  }
+  .meta { color: var(--sub); font-size: 13px; margin-top: 14px; }
+  h2 { font-size: 19px; margin: 48px 0 12px; letter-spacing: -.01em; }
+  ol, ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  .note {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px 18px; margin: 16px 0; font-size: 15px;
+  }
+  kbd {
+    background: var(--card); border: 1px solid var(--line); border-radius: 6px;
+    padding: 1px 6px; font-size: 13px; font-family: ui-monospace, monospace;
+  }
+  code { background: var(--card); padding: 2px 6px; border-radius: 5px; font-size: 13px; }
+  a { color: inherit; }
+  footer {
+    margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line);
+    color: var(--sub); font-size: 13px; text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img class="icon" src="icon.png" alt="">
+    <h1>SideNote</h1>
+    <p class="tag">화면 오른쪽 끝에서 슬라이드로 나오는 체크리스트</p>
+    <a class="dl" href="https://github.com/innervaworld/sidenote-releases/releases/latest/download/SideNote.dmg">
+      <img class="light" src="btn-light.png" alt="Download">
+      <img class="dark" src="btn-dark.png" alt="Download">
+    </a>
+    <p class="meta">.dmg · Apple Silicon + Intel · macOS 13 이상 · 무료</p>
+  </header>
+
+  <h2>설치</h2>
+  <ol>
+    <li>받은 <code>SideNote.dmg</code> 를 열고 <b>SideNote</b> 를 <b>응용 프로그램</b> 폴더로 옮겨 주세요.</li>
+    <li>응용 프로그램 폴더에서 SideNote 를 두 번 누릅니다.</li>
+    <li>macOS 가 확인을 한 번 요청합니다. App Store 를 거치지 않은 앱을 처음 열 때 거치는 절차예요.
+      <b>시스템 설정 → 개인정보 보호 및 보안</b> 으로 가서 아래로 내리면 SideNote 에 대한 안내가 보입니다.
+      옆의 <b>"확인 없이 열기"</b> 를 누르면 됩니다.</li>
+    <li>여기까지가 처음 한 번입니다. 다음부터는 바로 열립니다.</li>
+  </ol>
+
+  <h2>쓰는 법</h2>
+  <p>화면 오른쪽 끝에 얇은 색 선 네 개가 있어요. 마우스를 가까이 대면
+     <b>Today · Tomorrow · Month · Memo</b> 가 펼쳐집니다. 눌러서 열면 됩니다.</p>
+  <p><kbd>⌃⌥N</kbd> 으로도 열고 닫을 수 있어요.
+     메뉴바의 체크리스트 아이콘은 왼쪽 클릭이 열기·닫기, 오른쪽 클릭이 설정입니다.</p>
+  <ul>
+    <li><kbd>⌘N</kbd> 새 항목 · <kbd>⌘⇧N</kbd> 메모 달기</li>
+    <li><kbd>⌘↩</kbd> 완료 표시 · <kbd>⌘⌫</kbd> 줄 지우기</li>
+    <li><kbd>Esc</kbd> 편집 끝내기 (한 번 더 누르면 닫힘)</li>
+  </ul>
+  <p>줄에 마우스를 올리면 단추 세 개가 나타납니다. 메모를 달거나, 잡아서 순서를 바꾸거나,
+     더보기에서 복사·삭제를 할 수 있어요. 잡은 채로 위쪽 탭까지 끌면 그 목록으로 옮겨집니다.</p>
+
+  <h2>여러 컴퓨터에서 쓰기</h2>
+  <p>메뉴바 아이콘 오른쪽 클릭 → <b>"구글 계정으로 로그인…"</b> 을 누르면
+     적어 두신 내용이 <b>본인의 구글 드라이브</b>에 보관됩니다.
+     다른 컴퓨터에서 같은 계정으로 로그인하면 그대로 이어서 쓸 수 있어요.</p>
+  <div class="note">
+    내용은 <b>사용자 본인의 드라이브</b>에만 저장됩니다. 개발자의 서버는 없습니다.
+    자세한 내용은 <a href="privacy.html">개인정보처리방침</a>에 있습니다.
+  </div>
+
+  <h2>적어 둔 내용은 어디에</h2>
+  <p><code>~/Library/Application Support/SideNote/notes.json</code></p>
+  <p>앱을 지워도 이 파일은 남아 있어요. 다른 맥으로 옮기실 때 이 파일만 같은 자리에 복사해 두면
+     적어 두신 것이 그대로 따라옵니다.</p>
+
+  <h2>업데이트</h2>
+  <p>새 버전이 나오면 앱이 알아서 받아 둡니다. 기다리지 않고 지금 확인하려면
+     메뉴바 아이콘 오른쪽 클릭 → <b>"업데이트 확인…"</b> 을 누르세요.</p>
+
+  <footer>
+    <a href="https://github.com/innervaworld/sidenote-releases/releases">모든 버전 보기</a>
+    &nbsp;·&nbsp;
+    <a href="privacy.html">개인정보처리방침</a>
+  </footer>
+
+</div>
+</body>
+</html>
