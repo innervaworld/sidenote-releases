@@ -1,14 +1,29 @@
+<div align="center">
+
+<img src=".github/icon.png" width="112" alt="SideNote">
+
 # SideNote
 
-맥 화면 오른쪽 끝에서 슬라이드로 나오는 체크리스트. 메뉴바에만 사는 앱이라 Dock 을 차지하지 않는다.
+맥 화면 오른쪽 끝에서 슬라이드로 나오는 체크리스트<br>
+메뉴바에만 사는 앱이라 Dock 을 차지하지 않습니다
 
-## 받기
+<br>
 
-**[최신 버전 내려받기](https://github.com/innervaworld/sidenote-releases/releases/latest)** — `.dmg` 를 받으세요.
+<a href="https://github.com/innervaworld/sidenote-releases/releases/latest/download/SideNote.dmg">
+  <img src=".github/download-button.png" width="420" alt="맥용 내려받기">
+</a>
+
+<br><br>
+
+macOS 13 이상 · 무료
+
+</div>
+
+<br>
 
 ## 설치
 
-1. 받은 `.dmg` 를 열고 **SideNote** 를 **응용 프로그램** 폴더로 끌어다 놓습니다.
+1. 받은 `SideNote.dmg` 를 열고 **SideNote** 를 **응용 프로그램** 폴더로 끌어다 놓습니다.
 
 2. 응용 프로그램 폴더에서 SideNote 를 두 번 누릅니다.
 
@@ -44,10 +59,8 @@
 
 앱을 지워도 이 파일은 남습니다. 맥을 옮길 때 이 파일만 같은 경로로 복사하면 항목이 그대로 넘어옵니다.
 
-## 요구 사항
-
-macOS 13 이상. 인텔·애플실리콘 모두 지원합니다.
-
 ---
 
-여기는 배포 전용 저장소입니다. 받을 파일은 [Releases](https://github.com/innervaworld/sidenote-releases/releases) 에 있습니다.
+<div align="center">
+<sub>배포 전용 저장소입니다 · <a href="https://github.com/innervaworld/sidenote-releases/releases">모든 버전 보기</a></sub>
+</div>
