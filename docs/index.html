@@ -41,6 +41,11 @@
     padding: 1px 6px; font-size: 13px; font-family: ui-monospace, monospace;
   }
   code { background: var(--card); padding: 2px 6px; border-radius: 5px; font-size: 13px; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+  th { color: var(--sub); font-weight: 600; font-size: 13px; }
+  td:first-child { white-space: nowrap; }
+  .legend { color: var(--sub); font-size: 13.5px; }
   a { color: inherit; }
   footer {
     margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line);
@@ -75,13 +80,24 @@
   <h2>쓰는 법</h2>
   <p>화면 오른쪽 끝에 얇은 색 선 네 개가 있어요. 마우스를 가까이 대면
      <b>Today · Tomorrow · Month · Memo</b> 가 펼쳐집니다. 눌러서 열면 됩니다.</p>
-  <p><kbd>⌃⌥N</kbd> 으로도 열고 닫을 수 있어요.
+  <p><kbd>⌃</kbd> + <kbd>⌥</kbd> + <kbd>N</kbd> 으로도 열고 닫을 수 있어요.
      메뉴바의 체크리스트 아이콘은 왼쪽 클릭이 열기·닫기, 오른쪽 클릭이 설정입니다.</p>
-  <ul>
-    <li><kbd>⌘N</kbd> 새 항목 · <kbd>⌘⇧N</kbd> 메모 달기</li>
-    <li><kbd>⌘↩</kbd> 완료 표시 · <kbd>⌘⌫</kbd> 줄 지우기</li>
-    <li><kbd>Esc</kbd> 편집 끝내기 (한 번 더 누르면 닫힘)</li>
-  </ul>
+
+  <table>
+    <thead><tr><th>단축키</th><th>내용</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘</kbd> + <kbd>N</kbd></td><td>새 항목</td></tr>
+      <tr><td><kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd></td><td>지금 줄에 메모 달기</td></tr>
+      <tr><td><kbd>⌘</kbd> + <kbd>↩</kbd></td><td>완료 표시</td></tr>
+      <tr><td><kbd>⌘</kbd> + <kbd>⌫</kbd></td><td>줄 지우기</td></tr>
+      <tr><td><kbd>Esc</kbd></td><td>편집 끝내기 (한 번 더 누르면 닫힘)</td></tr>
+      <tr><td><kbd>⌘</kbd> + <kbd>W</kbd></td><td>닫기</td></tr>
+    </tbody>
+  </table>
+
+  <p class="legend">기호는 키보드에 있는 그대로예요.<br>
+     <kbd>⌘</kbd> 커맨드 · <kbd>⇧</kbd> 시프트 · <kbd>⌃</kbd> 컨트롤 ·
+     <kbd>⌥</kbd> 옵션 · <kbd>↩</kbd> 엔터 · <kbd>⌫</kbd> 딜리트</p>
   <p>줄에 마우스를 올리면 단추 세 개가 나타납니다. 메모를 달거나, 잡아서 순서를 바꾸거나,
      더보기에서 복사·삭제를 할 수 있어요. 잡은 채로 위쪽 탭까지 끌면 그 목록으로 옮겨집니다.</p>
 
