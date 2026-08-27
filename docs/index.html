@@ -39,6 +39,14 @@
   @media (prefers-color-scheme: dark) {
     .warn { background: #2a2416; border-color: #4a3f22; color: #e8d9a8; }
   }
+  .lead { color: var(--sub); margin: 0 0 22px; }
+  .step { display: flex; gap: 14px; margin: 0 0 20px; align-items: flex-start; }
+  .num {
+    flex: none; width: 26px; height: 26px; border-radius: 50%;
+    background: var(--text); color: var(--bg);
+    font-size: 14px; font-weight: 700; line-height: 26px; text-align: center;
+  }
+  .tip { color: var(--sub); font-size: 14px; margin-top: 5px; }
   .note {
     background: var(--card); border: 1px solid var(--line); border-radius: 12px;
     padding: 16px 18px; margin: 16px 0; font-size: 15px;
@@ -75,20 +83,62 @@
   </header>
 
   <h2>설치</h2>
-  <ol>
-    <li>받은 <code>SideNote.dmg</code> 를 열고 <b>SideNote</b> 를 <b>응용 프로그램</b> 폴더로 옮겨 주세요.</li>
-    <li>응용 프로그램 폴더에서 SideNote 를 두 번 누릅니다.</li>
-    <li>열리지 않고 <b>"Apple이 확인할 수 없습니다"</b> 라는 창이 뜹니다.
-      App Store 를 거치지 않은 앱을 처음 열 때 macOS 가 확인을 요청하는 절차예요.
+  <p class="lead">받아서 두 번 누르면 됩니다. 중간에 macOS 가 한 번 막는데, 처음 한 번뿐이에요.</p>
+
+  <div class="step">
+    <div class="num">1</div>
+    <div>
+      <b>받은 <code>SideNote.dmg</code> 를 두 번 눌러 엽니다.</b><br>
+      창이 뜨면 그 안의 <b>SideNote</b> 를 두 번 누르세요.
+      <div class="tip">응용 프로그램 폴더로 끌어다 놓지 않으셔도 됩니다. 앱이 나중에 알아서 옮겨요.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="num">2</div>
+    <div>
+      <b>"Apple 이 확인할 수 없습니다" 라는 창이 뜹니다.</b><br>
+      고장이 아니라, App Store 를 거치지 않은 앱을 처음 열 때 나오는 안내예요.
       <b>완료</b> 를 눌러 창을 닫습니다.
-      <div class="warn">이 창의 <b>"휴지통으로 이동"</b> 은 누르지 마세요. 앱이 지워집니다.</div></li>
-    <li><b>시스템 설정 → 개인정보 보호 및 보안</b> 을 열고 아래로 내리면
-      <i>"Mac을 보호하기 위해 차단했습니다"</i> 라는 줄이 보입니다.
-      옆의 <b>"그래도 열기"</b> 를 누르세요.
-      (macOS 버전에 따라 <b>"확인 없이 열기"</b> 로 적혀 있을 수도 있습니다.)</li>
-    <li>확인 창이 한 번 더 뜨면 <b>열기</b> 를 누르고, 암호나 Touch ID 를 요구하면 확인해 주세요.</li>
-    <li>여기까지가 처음 한 번입니다. 다음부터는 바로 열립니다.</li>
-  </ol>
+      <div class="warn">"휴지통으로 이동" 은 누르지 마세요. 앱이 지워집니다.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="num">3</div>
+    <div>
+      <b>시스템 설정 → 개인정보 보호 및 보안</b> 을 엽니다.<br>
+      아래로 내리면 <i>"Mac 을 보호하기 위해 차단했습니다"</i> 라는 줄이 있어요.
+      옆의 <b>"그래도 열기"</b> 를 누릅니다.
+      <div class="tip">macOS 버전에 따라 <b>"확인 없이 열기"</b> 로 적혀 있을 수도 있습니다.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="num">4</div>
+    <div>
+      <b>확인 창이 한 번 더 뜨면 "열기"</b> 를 누릅니다.<br>
+      암호나 Touch ID 를 요구하면 확인해 주세요.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="num">5</div>
+    <div>
+      <b>앱이 "응용 프로그램 폴더로 옮길까요?" 라고 물으면 "옮기기"</b> 를 누릅니다.<br>
+      옮긴 뒤 앱이 다시 열립니다.
+    </div>
+  </div>
+
+  <div class="note">
+    <b>열렸는데 아무것도 안 보이나요?</b> 정상입니다.
+    SideNote 는 <b>Dock 에 아이콘이 없습니다.</b>
+    화면 <b>오른쪽 위 메뉴바</b>의 체크리스트 아이콘과,
+    화면 <b>오른쪽 끝</b>의 얇은 색 선 4개로 씁니다.
+  </div>
+
+  <p class="tip">그래도 열리지 않으면
+    <a href="trouble.html">설치가 안 될 때</a> 를 봐 주세요.</p>
 
   <h2>쓰는 법</h2>
   <p>화면 오른쪽 끝에 얇은 색 선 네 개가 있어요. 마우스를 가까이 대면

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SideNote — 설치가 안 될 때</title>
+<style>
+  :root { --bg:#fff; --text:#191f28; --sub:#8b95a1; --line:#e5e8eb; --card:#f9fafb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#16181d; --text:#e8eaed; --sub:#8b95a1; --line:#2e3138; --card:#1f2229; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.75 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 64px 24px 96px; }
+  h1 { font-size: 26px; letter-spacing: -.02em; margin: 0 0 8px; }
+  .lead { color: var(--sub); margin: 0 0 36px; }
+  h2 { font-size: 18px; margin: 40px 0 8px; letter-spacing: -.01em; }
+  .q { color: var(--sub); font-size: 14px; margin: 0 0 10px; }
+  code { background: var(--card); padding: 2px 6px; border-radius: 5px; font-size: 13px; }
+  pre {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 14px; overflow-x: auto; font-size: 13px; line-height: 1.6;
+  }
+  .note {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px 18px; margin: 16px 0; font-size: 15px;
+  }
+  ul { padding-left: 20px; } li { margin: 6px 0; }
+  a { color: inherit; }
+  footer {
+    margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line);
+    color: var(--sub); font-size: 13px; text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>설치가 안 될 때</h1>
+<p class="lead">막히기 쉬운 곳부터 순서대로 적었습니다.</p>
+
+<h2>열었는데 아무것도 안 보입니다</h2>
+<p class="q">가장 흔한 경우입니다. 대개는 이미 잘 열린 것입니다.</p>
+<p><b>SideNote 는 Dock 에 아이콘이 없습니다.</b> 창도 뜨지 않아요. 두 곳을 봐 주세요.</p>
+<ul>
+  <li>화면 <b>오른쪽 위 메뉴바</b> — 체크리스트 모양 아이콘 (배터리·와이파이 근처)</li>
+  <li>화면 <b>오른쪽 끝</b> — 얇은 색 선 4개. 마우스를 가까이 대면 펼쳐집니다</li>
+</ul>
+<p>둘 중 하나라도 보이면 정상입니다. 선에 마우스를 대거나
+   <code>⌃</code> + <code>⌥</code> + <code>N</code> 을 눌러 보세요.</p>
+<div class="note">
+  노트북에 노치가 있고 메뉴바 아이콘이 많으면, 새 아이콘이 노치에 가려 안 보일 수 있습니다.
+  다른 앱 아이콘을 <code>⌘</code> 를 누른 채 끌어 정리하거나, 화면 오른쪽 끝의 색 선으로 쓰시면 됩니다.
+</div>
+
+<h2>"휴지통으로 이동" 을 눌러 버렸습니다</h2>
+<p class="q">앱이 지워진 것뿐이라, 다시 받으면 됩니다.</p>
+<p>휴지통에서 꺼내거나, <a href="./">받는 곳</a>에서 다시 내려받으세요.
+   이번에는 <b>완료</b> 를 누르고 시스템 설정에서 <b>"그래도 열기"</b> 를 누르시면 됩니다.</p>
+
+<h2>"그래도 열기" 를 눌렀는데 안 열립니다</h2>
+<p class="q">응용 프로그램 폴더로 옮기지 않고 dmg 안에서 실행하면 생길 수 있습니다.</p>
+<p>dmg 창의 앱을 <b>응용 프로그램 폴더로 끌어다 놓은 뒤</b>, 응용 프로그램 폴더에서 실행해 보세요.
+   그래도 안 되면 아래 진단을 돌려 주세요.</p>
+
+<h2>"손상되었기 때문에 열 수 없습니다"</h2>
+<p class="q">파일이 실제로 망가진 것이 아니라, 격리 표시가 남아 생기는 일입니다.</p>
+<p>터미널(Spotlight 에서 <code>터미널</code> 검색)에 아래를 붙여넣고 실행하세요.</p>
+<pre>xattr -cr /Applications/SideNote.app</pre>
+<p>그다음 응용 프로그램 폴더에서 다시 열어 보세요.</p>
+
+<h2>그래도 안 될 때 — 진단</h2>
+<p class="q">무엇이 문제인지 알려 주는 명령입니다. 읽기만 하고 아무것도 바꾸지 않습니다.</p>
+<pre>curl -sSL https://innervaworld.github.io/sidenote-releases/diag.sh | bash</pre>
+<p>터미널에 붙여넣고 <code>return</code> 을 누른 뒤, 나온 결과를 그대로 보내 주세요.</p>
+
+<h2>이 앱이 열리는 조건</h2>
+<ul>
+  <li><b>macOS 13 이상</b> — 애플 메뉴 → "이 Mac에 관하여" 에서 확인할 수 있습니다</li>
+  <li>인텔·애플실리콘 모두 지원합니다</li>
+</ul>
+
+<footer>
+  <a href="./">SideNote 홈</a> ·
+  <a href="privacy.html">개인정보처리방침</a>
+</footer>
+
+</div>
+</body>
+</html>
