@@ -4,7 +4,7 @@
 
 화면 오른쪽 끝에서 슬라이드로 나오는 체크리스트
 
-<a href="https://github.com/innervaworld/sidenote-releases/releases/latest/download/SideNote.dmg">
+<a href="https://github.com/innervaworld/sidenote-releases/releases/latest/download/SideNote.zip">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset=".github/download-button-dark.png">
     <img src=".github/download-button-light.png" width="168" alt="Download">
@@ -17,13 +17,13 @@
 
 ## 설치
 
-받아서 두 번 누르면 됩니다. 중간에 macOS 가 한 번 막는데, **처음 한 번뿐**이에요.
+중간에 macOS 가 한 번 막습니다. 고장이 아니고, **처음 한 번뿐**이에요.
 
-**1.** 받은 `SideNote.dmg` 를 두 번 눌러 엽니다. 창이 뜨면 그 안의 **SideNote** 를 두 번 누르세요.
-   응용 프로그램 폴더로 끌어다 놓지 않으셔도 됩니다 — 앱이 나중에 알아서 옮깁니다.
+**1.** 위 단추로 받으면 다운로드 폴더에 **SideNote** 앱이 생깁니다.
+   압축이 그대로 남아 있으면 `SideNote.zip` 을 두 번 눌러 풀어 주세요.
 
-**2.** **"Apple 이 확인할 수 없습니다"** 라는 창이 뜹니다. 고장이 아니라, App Store 를 거치지 않은
-   앱을 처음 열 때 나오는 안내예요. **완료** 를 눌러 창을 닫습니다.
+**2.** **SideNote 를 두 번 누릅니다.** *"Apple 이 확인할 수 없습니다"* 라는 창이 뜹니다.
+   App Store 를 거치지 않은 앱을 처음 열 때 나오는 안내예요. **완료** 를 눌러 창을 닫습니다.
 
 > ⚠️ **"휴지통으로 이동" 은 누르지 마세요.** 앱이 지워집니다.
 
@@ -34,12 +34,13 @@
 **4.** 확인 창이 한 번 더 뜨면 **열기** 를 누릅니다. 암호나 Touch ID 를 요구하면 확인해 주세요.
 
 **5.** 앱이 **"응용 프로그램 폴더로 옮길까요?"** 라고 물으면 **옮기기** 를 누릅니다.
-   옮긴 뒤 앱이 다시 열립니다.
+   옮긴 뒤 앱이 다시 열립니다. **끌어다 놓으실 필요 없습니다.**
 
 ### 열렸는데 아무것도 안 보이나요?
 
 정상입니다. SideNote 는 **Dock 에 아이콘이 없습니다.**
 화면 **오른쪽 위 메뉴바**의 체크리스트 아이콘과, 화면 **오른쪽 끝**의 얇은 색 선 4개로 씁니다.
+`⌃` + `⌥` + `N` 을 눌러도 열립니다.
 
 그래도 열리지 않으면 [설치가 안 될 때](https://innervaworld.github.io/sidenote-releases/trouble.html) 를 봐 주세요.
 
