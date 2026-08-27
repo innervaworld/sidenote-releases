@@ -60,10 +60,20 @@ else
   echo "  없음"
 fi
 
-echo "── 직접 실행해 보기 (6초) ──"
-"$FOUND/Contents/MacOS/SideNote" 2>&1 | head -20 | sed 's/^/  /' &
-sleep 6
-pkill -x SideNote 2>/dev/null
-echo "  (위에 아무 줄도 없으면 오류 없이 실행된 것입니다)"
+echo "── 직접 실행해 보기 ──"
+if pgrep -x SideNote >/dev/null; then
+  echo "  이미 실행 중이라 건너뜁니다 (돌고 있는 앱을 끄지 않기 위해)"
+else
+  LOG=$(mktemp)
+  "$FOUND/Contents/MacOS/SideNote" >"$LOG" 2>&1 &
+  APPPID=$!
+  sleep 6
+  # 이 스크립트가 띄운 것만 정확히 끈다. 다른 인스턴스는 건드리지 않는다.
+  kill "$APPPID" 2>/dev/null
+  wait "$APPPID" 2>/dev/null
+  if [ -s "$LOG" ]; then head -20 "$LOG" | sed 's/^/  /'
+  else echo "  오류 없이 실행됐습니다 (그렇다면 앱은 정상이고, 메뉴바를 못 찾으신 것일 수 있습니다)"; fi
+  rm -f "$LOG"
+fi
 
 echo "════ 끝 ════"
